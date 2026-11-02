@@ -1,0 +1,37 @@
+{
+  "name": "prettyanki",
+  "displayName": "PrettyAnki",
+  "version": "1.6.0",
+  "description": "An Ant Design-styled minimalist theme for AnkiWeb with light, dark and sepia modes.",
+  "author": "vinig",
+  "private": true,
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "build:firefox": "plasmo build --target=firefox-mv3",
+    "package": "plasmo package"
+  },
+  "manifest": {
+    "permissions": [
+      "storage"
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "prettyanki@example.com"
+      }
+    }
+  },
+  "dependencies": {
+    "@plasmohq/storage": "^1.15.0",
+    "antd": "^6.6.8",
+    "plasmo": "^0.90.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^5.9.3"
+  }
+}

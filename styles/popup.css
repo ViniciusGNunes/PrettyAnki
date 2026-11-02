@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  width: 290px;
+  padding: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+.card {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 16px;
+  font-size: 14px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.label { display: block; margin-bottom: 10px; }

@@ -1,0 +1,865 @@
+html.aw-min {
+  --bg: #f2f2f2;
+  --bg-elevated: #fafafa;
+  --fg: rgba(0, 0, 0, 0.88);
+  --fg-2: rgba(0, 0, 0, 0.65);
+  --fg-3: rgba(0, 0, 0, 0.45);
+  --fg-4: rgba(0, 0, 0, 0.25);
+  --fill-1: rgba(0, 0, 0, 0.02);
+  --fill-2: rgba(0, 0, 0, 0.04);
+  --fill-3: rgba(0, 0, 0, 0.06);
+  --border: #d0d0d0;
+  --border-2: #e2e2e2;
+  --th-bg: #ebebeb;
+
+  --primary: #1677ff;
+  --primary-hover: #4096ff;
+  --primary-active: #0958d9;
+  --primary-bg: #e6f4ff;
+  --primary-bg-hover: #bae0ff;
+  --primary-border: #91caff;
+  --primary-shadow: rgba(5, 145, 255, 0.1);
+  --on-primary: #ffffff;
+  --focus: rgba(5, 145, 255, 0.1);
+  --link: #1677ff;
+  --link-hover: #4096ff;
+
+  --error: #ff4d4f;
+  --error-bg: #fff2f0;
+  --error-border: #ffccc7;
+  --warning: #faad14;
+  --warning-bg: #fffbe6;
+  --warning-border: #ffe58f;
+  --success: #52c41a;
+  --success-text: #389e0d;
+  --success-bg: #f6ffed;
+  --success-border: #b7eb8f;
+  --info: #1677ff;
+
+  --radius: 6px;
+  --radius-lg: 8px;
+  --radius-sm: 4px;
+  --shadow-pop: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.aw-min[data-aw-theme="auto"] {
+    color-scheme: dark;
+    --bg: #141414;
+    --bg-elevated: #1f1f1f;
+    --fg: rgba(255, 255, 255, 0.85);
+    --fg-2: rgba(255, 255, 255, 0.65);
+    --fg-3: rgba(255, 255, 255, 0.45);
+    --fg-4: rgba(255, 255, 255, 0.25);
+    --fill-1: rgba(255, 255, 255, 0.04);
+    --fill-2: rgba(255, 255, 255, 0.08);
+    --fill-3: rgba(255, 255, 255, 0.12);
+    --border: #424242;
+    --border-2: #303030;
+    --th-bg: rgba(255, 255, 255, 0.04);
+
+    --primary: #1668dc;
+    --primary-hover: #3c89e8;
+    --primary-active: #1554ad;
+    --primary-bg: #111a2c;
+    --primary-bg-hover: #112545;
+    --primary-border: #15325b;
+    --primary-shadow: rgba(0, 0, 0, 0.045);
+    --focus: rgba(22, 104, 220, 0.25);
+    --link: #3c89e8;
+    --link-hover: #65a9f3;
+
+    --error: #dc4446;
+    --error-bg: #2c1618;
+    --error-border: #58181c;
+    --warning: #d89614;
+    --warning-bg: #2b2111;
+    --warning-border: #594214;
+    --success: #49aa19;
+    --success-text: #49aa19;
+    --success-bg: #162312;
+    --success-border: #274916;
+    --info: #3c89e8;
+
+    --shadow-pop: 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+html.aw-min[data-aw-theme="dark"] {
+  color-scheme: dark;
+  --bg: #141414;
+  --bg-elevated: #1f1f1f;
+  --fg: rgba(255, 255, 255, 0.85);
+  --fg-2: rgba(255, 255, 255, 0.65);
+  --fg-3: rgba(255, 255, 255, 0.45);
+  --fg-4: rgba(255, 255, 255, 0.25);
+  --fill-1: rgba(255, 255, 255, 0.04);
+  --fill-2: rgba(255, 255, 255, 0.08);
+  --fill-3: rgba(255, 255, 255, 0.12);
+  --border: #424242;
+  --border-2: #303030;
+  --th-bg: rgba(255, 255, 255, 0.04);
+
+  --primary: #1668dc;
+  --primary-hover: #3c89e8;
+  --primary-active: #1554ad;
+  --primary-bg: #111a2c;
+  --primary-bg-hover: #112545;
+  --primary-border: #15325b;
+  --primary-shadow: rgba(0, 0, 0, 0.045);
+  --focus: rgba(22, 104, 220, 0.25);
+  --link: #3c89e8;
+  --link-hover: #65a9f3;
+
+  --error: #dc4446;
+  --error-bg: #2c1618;
+  --error-border: #58181c;
+  --warning: #d89614;
+  --warning-bg: #2b2111;
+  --warning-border: #594214;
+  --success: #49aa19;
+  --success-text: #49aa19;
+  --success-bg: #162312;
+  --success-border: #274916;
+  --info: #3c89e8;
+
+  --shadow-pop: 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+}
+
+html.aw-min[data-aw-theme="warm"] {
+  color-scheme: light;
+  --bg: #f4ecd8;
+  --bg-elevated: #f9f2e1;
+  --fg: #433422;
+  --fg-2: rgba(67, 52, 34, 0.78);
+  --fg-3: rgba(67, 52, 34, 0.55);
+  --fg-4: rgba(67, 52, 34, 0.3);
+  --fill-1: rgba(67, 52, 34, 0.03);
+  --fill-2: rgba(67, 52, 34, 0.06);
+  --fill-3: rgba(67, 52, 34, 0.09);
+  --border: #d6c7a4;
+  --border-2: #e4d8bc;
+  --th-bg: #efe5cb;
+
+  --primary: #8a5a1e;
+  --primary-hover: #a36d2a;
+  --primary-active: #6f4515;
+  --primary-bg: #ecdcb8;
+  --primary-bg-hover: #e2cd9f;
+  --primary-border: #cfb27a;
+  --primary-shadow: rgba(138, 90, 30, 0.12);
+  --on-primary: #fbf5e6;
+  --focus: rgba(138, 90, 30, 0.2);
+  --link: #7a4d14;
+  --link-hover: #a36d2a;
+
+  --error: #b4442f;
+  --error-bg: #f2dccf;
+  --error-border: #deb4a2;
+  --warning: #b7791f;
+  --warning-bg: #f3e4bd;
+  --warning-border: #dfc88a;
+  --success: #46702f;
+  --success-text: #46702f;
+  --success-bg: #e3ead0;
+  --success-border: #bccf94;
+  --info: #3a6a8c;
+
+  --shadow-pop: 0 6px 16px 0 rgba(67, 52, 34, 0.12), 0 3px 6px -4px rgba(67, 52, 34, 0.16), 0 9px 28px 8px rgba(67, 52, 34, 0.08);
+}
+/* Cards keep their own (usually cream) colors; just warm them slightly to blend in. */
+html.aw-min[data-aw-theme="warm"] #qa_box.card { filter: sepia(.5) saturate(.95); }
+
+html.aw-min,
+html.aw-min body {
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+  font-family: var(--font) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html.aw-min body { font-size: 14px; line-height: 1.5714; }
+
+html.aw-min *:where(:not(#qa_box *)),
+html.aw-min *:where(:not(#qa_box *))::before,
+html.aw-min *:where(:not(#qa_box *))::after { border-color: var(--border-2); }
+
+html.aw-min h1:where(:not(#qa_box *)), html.aw-min h2:where(:not(#qa_box *)), html.aw-min h3:where(:not(#qa_box *)), html.aw-min h4:where(:not(#qa_box *)), html.aw-min h5:where(:not(#qa_box *)) {
+  font-family: var(--font) !important;
+  color: var(--fg) !important;
+  font-weight: 600 !important;
+  line-height: 1.35;
+}
+html.aw-min h1:where(:not(#qa_box *)) { font-size: 1.875rem !important; }
+html.aw-min h2:where(:not(#qa_box *)) { font-size: 1.5rem !important; }
+html.aw-min h3:where(:not(#qa_box *)) { font-size: 1.25rem !important; }
+html.aw-min h4:where(:not(#qa_box *)), html.aw-min h5:where(:not(#qa_box *)) { font-size: 1rem !important; }
+
+html.aw-min a:where(:not(#qa_box *)) {
+  color: var(--link) !important;
+  text-decoration: none;
+  transition: color .2s;
+}
+html.aw-min a:where(:not(#qa_box *)):hover { color: var(--link-hover) !important; }
+html.aw-min a:where(:not(#qa_box *)):active { color: var(--primary-active) !important; }
+
+html.aw-min code:where(:not(#qa_box *)), html.aw-min kbd:where(:not(#qa_box *)), html.aw-min pre:where(:not(#qa_box *)) { font-family: var(--font-mono) !important; }
+
+html.aw-min .container,
+html.aw-min main { max-width: 1024px !important; }
+
+html.aw-min ::selection { background: var(--primary); color: var(--on-primary); }
+
+html.aw-min nav,
+html.aw-min .navbar,
+html.aw-min header {
+  background: var(--bg) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border-2) !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+html.aw-min nav a,
+html.aw-min .navbar a,
+html.aw-min .nav-link {
+  color: var(--fg) !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  border-radius: var(--radius);
+  padding: 6px 12px !important;
+  transition: color .2s, background-color .2s;
+}
+html.aw-min nav a:hover,
+html.aw-min .nav-link:hover {
+  color: var(--primary) !important;
+  background: var(--fill-2);
+}
+html.aw-min .nav-link.active,
+html.aw-min nav a[aria-current="page"] {
+  color: var(--primary) !important;
+  background: var(--primary-bg);
+}
+html.aw-min nav .navbar-brand,
+html.aw-min .navbar-brand {
+  color: var(--fg) !important;
+  font-weight: 600 !important;
+  background: none !important;
+}
+
+html.aw-min .card:not(#qa_box),
+html.aw-min .list-group {
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border-2) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: none !important;
+}
+html.aw-min .modal-content {
+  background: var(--bg-elevated) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border-2) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-pop) !important;
+  overflow: hidden;
+}
+html.aw-min .modal-header,
+html.aw-min .modal-footer {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 20px 24px 8px !important;
+  gap: 8px;
+}
+html.aw-min .modal-footer { padding: 8px 24px 20px !important; }
+html.aw-min .modal-title { font-weight: 600 !important; }
+html.aw-min .modal-body { padding: 8px 24px !important; }
+html.aw-min .modal-content .btn,
+html.aw-min .modal-content button:not(.btn-close) { border-radius: 999px !important; padding: 0 18px !important; }
+html.aw-min .modal-content input,
+html.aw-min .modal-content select,
+html.aw-min .modal-content textarea { border-radius: 12px !important; }
+html.aw-min .btn-close { border-radius: 999px !important; opacity: .55; }
+html.aw-min .card-body { padding: 24px !important; }
+html.aw-min .card-header,
+html.aw-min .card-footer {
+  background: transparent !important;
+  border-color: var(--border-2) !important;
+  padding: 16px 24px !important;
+}
+html.aw-min .card-title { font-weight: 600 !important; }
+html.aw-min .list-group-item {
+  background: transparent !important;
+  color: var(--fg) !important;
+  border-color: var(--border-2) !important;
+}
+html.aw-min .modal-backdrop { background: #000 !important; }
+html.aw-min .modal-backdrop.show { opacity: .35 !important; backdrop-filter: blur(2px); }
+
+html.aw-min .dropdown-menu {
+  background: var(--bg-elevated) !important;
+  color: var(--fg) !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: var(--shadow-pop) !important;
+  padding: 6px !important;
+}
+html.aw-min .dropdown-item {
+  color: var(--fg) !important;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  padding: 5px 12px !important;
+  text-decoration: none !important;
+}
+html.aw-min .dropdown-item:hover,
+html.aw-min .dropdown-item:focus { background: var(--fill-2) !important; }
+
+html.aw-min table:where(:not(#qa_box *)) {
+  width: 100%;
+  background: transparent !important;
+  color: var(--fg) !important;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border: 1px solid var(--border-2) !important;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-size: 14px;
+  box-shadow: none !important;
+}
+html.aw-min thead th:where(:not(#qa_box *)),
+html.aw-min th:where(:not(#qa_box *)) {
+  background: var(--th-bg) !important;
+  color: var(--fg) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  text-align: left;
+  padding: 16px !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border-2) !important;
+  vertical-align: middle;
+}
+html.aw-min td:where(:not(#qa_box *)) {
+  background: transparent !important;
+  color: var(--fg) !important;
+  padding: 16px !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border-2) !important;
+  vertical-align: middle;
+  box-shadow: none !important;
+}
+html.aw-min tr:last-child td:where(:not(#qa_box *)) { border-bottom: none !important; }
+html.aw-min tbody tr:where(:not(#qa_box *)) { transition: background-color .2s; }
+html.aw-min tbody tr:hover td:where(:not(#qa_box *)) { background: var(--th-bg) !important; }
+
+html.aw-min button,
+html.aw-min .btn,
+html.aw-min input[type="button"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 15px !important;
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5714 !important;
+  white-space: nowrap;
+  text-decoration: none !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+  background: var(--bg) !important;
+  background-image: none !important;
+  color: var(--fg) !important;
+  box-shadow: 0 2px 0 var(--fill-1) !important;
+  transition: all .2s cubic-bezier(.645, .045, .355, 1);
+  cursor: pointer;
+}
+html.aw-min button:hover,
+html.aw-min .btn:hover,
+html.aw-min input[type="button"]:hover {
+  background: var(--bg) !important;
+  border-color: var(--primary-hover) !important;
+  color: var(--primary-hover) !important;
+}
+html.aw-min button:active,
+html.aw-min .btn:active,
+html.aw-min input[type="button"]:active {
+  border-color: var(--primary-active) !important;
+  color: var(--primary-active) !important;
+}
+html.aw-min button:disabled,
+html.aw-min .btn:disabled,
+html.aw-min .btn.disabled {
+  background: var(--fill-2) !important;
+  border-color: var(--border) !important;
+  color: var(--fg-4) !important;
+  box-shadow: none !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+html.aw-min button:focus-visible,
+html.aw-min .btn:focus-visible,
+html.aw-min a:focus-visible {
+  outline: 4px solid var(--focus) !important;
+  outline-offset: 1px;
+}
+
+html.aw-min .btn-primary,
+html.aw-min .btn-dark,
+html.aw-min button[type="submit"],
+html.aw-min input[type="submit"] {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--on-primary) !important;
+  height: 32px;
+  padding: 0 15px !important;
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 2px 0 var(--primary-shadow) !important;
+  cursor: pointer;
+}
+html.aw-min .btn-primary:hover,
+html.aw-min .btn-dark:hover,
+html.aw-min button[type="submit"]:hover,
+html.aw-min input[type="submit"]:hover {
+  background: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+  color: var(--on-primary) !important;
+}
+html.aw-min .btn-primary:active,
+html.aw-min .btn-dark:active,
+html.aw-min button[type="submit"]:active,
+html.aw-min input[type="submit"]:active {
+  background: var(--primary-active) !important;
+  border-color: var(--primary-active) !important;
+  color: var(--on-primary) !important;
+}
+
+html.aw-min .btn-secondary,
+html.aw-min .btn-light {
+  background: var(--fill-2) !important;
+  border-color: transparent !important;
+  color: var(--fg) !important;
+  box-shadow: none !important;
+}
+html.aw-min .btn-secondary:hover,
+html.aw-min .btn-light:hover {
+  background: var(--fill-3) !important;
+  border-color: transparent !important;
+  color: var(--fg) !important;
+}
+html.aw-min .btn-link {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: var(--link) !important;
+}
+html.aw-min .btn-link:hover {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--link-hover) !important;
+}
+
+html.aw-min .btn-danger,
+html.aw-min .btn-warning,
+html.aw-min .btn-success,
+html.aw-min .btn-info,
+html.aw-min .btn-outline-danger,
+html.aw-min .btn-outline-warning,
+html.aw-min .btn-outline-success,
+html.aw-min .btn-outline-info,
+html.aw-min .btn-outline-primary,
+html.aw-min .btn-outline-secondary {
+  background: var(--bg) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--fg) !important;
+  min-width: 88px;
+}
+html.aw-min .btn-danger::before,
+html.aw-min .btn-warning::before,
+html.aw-min .btn-success::before,
+html.aw-min .btn-info::before,
+html.aw-min .btn-outline-danger::before,
+html.aw-min .btn-outline-warning::before,
+html.aw-min .btn-outline-success::before,
+html.aw-min .btn-outline-info::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+html.aw-min .btn-danger::before,  html.aw-min .btn-outline-danger::before  { background: var(--error); }
+html.aw-min .btn-warning::before, html.aw-min .btn-outline-warning::before { background: var(--warning); }
+html.aw-min .btn-success::before, html.aw-min .btn-outline-success::before { background: var(--success); }
+html.aw-min .btn-info::before,    html.aw-min .btn-outline-info::before    { background: var(--info); }
+html.aw-min .btn-danger:hover,
+html.aw-min .btn-warning:hover,
+html.aw-min .btn-success:hover,
+html.aw-min .btn-info:hover,
+html.aw-min [class*="btn-outline-"]:hover {
+  background: var(--bg) !important;
+  border-color: var(--primary-hover) !important;
+  color: var(--primary-hover) !important;
+}
+
+html.aw-min input[type="text"],
+html.aw-min input[type="email"],
+html.aw-min input[type="password"],
+html.aw-min input[type="search"],
+html.aw-min input[type="number"],
+html.aw-min input[type="url"],
+html.aw-min select,
+html.aw-min textarea,
+html.aw-min .form-control,
+html.aw-min .form-select {
+  box-sizing: border-box !important;
+  height: 32px;
+  width: 100%;
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 4px 11px !important;
+  box-shadow: none !important;
+  transition: all .2s;
+}
+html.aw-min textarea { height: auto; min-height: 80px; padding: 4px 11px !important; }
+html.aw-min input::placeholder,
+html.aw-min textarea::placeholder { color: var(--fg-4) !important; opacity: 1; }
+html.aw-min input:hover,
+html.aw-min select:hover,
+html.aw-min textarea:hover,
+html.aw-min .form-control:hover,
+html.aw-min .form-select:hover { border-color: var(--primary-hover) !important; }
+html.aw-min input:focus,
+html.aw-min select:focus,
+html.aw-min textarea:focus,
+html.aw-min .form-control:focus,
+html.aw-min .form-select:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px var(--focus) !important;
+}
+html.aw-min select option { background: var(--bg-elevated); color: var(--fg); }
+
+html.aw-min input[type="checkbox"],
+html.aw-min input[type="radio"] {
+  accent-color: var(--primary);
+  width: 16px;
+  height: 16px;
+}
+
+html.aw-min label,
+html.aw-min .form-label {
+  color: var(--fg) !important;
+  font-size: 14px;
+  line-height: 1.5714;
+}
+html.aw-min .form-text { color: var(--fg-3) !important; font-size: 14px; }
+
+html.aw-min hr:where(:not(#qa_box *)) { border: none !important; border-top: 1px solid var(--border-2) !important; opacity: 1 !important; }
+html.aw-min .text-muted:where(:not(#qa_box *)),
+html.aw-min .text-secondary:where(:not(#qa_box *)),
+html.aw-min small:where(:not(#qa_box *)) { color: var(--fg-3) !important; }
+
+html.aw-min .badge {
+  display: inline-block;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid var(--border) !important;
+  background: var(--th-bg) !important;
+  color: var(--fg) !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  padding: 0 7px !important;
+}
+
+html.aw-min .alert {
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid var(--primary-border) !important;
+  background: var(--primary-bg) !important;
+  color: var(--fg) !important;
+  padding: 8px 12px !important;
+  font-size: 14px;
+}
+html.aw-min .alert-danger  { border-color: var(--error-border) !important;   background: var(--error-bg) !important; }
+html.aw-min .alert-warning { border-color: var(--warning-border) !important; background: var(--warning-bg) !important; }
+html.aw-min .alert-success { border-color: var(--success-border) !important; background: var(--success-bg) !important; }
+
+html.aw-min footer {
+  background: transparent !important;
+  color: var(--fg-3) !important;
+  border-top: 1px solid var(--border-2) !important;
+  font-size: 14px;
+}
+html.aw-min footer a { color: var(--fg-3) !important; }
+html.aw-min footer a:hover { color: var(--primary) !important; }
+
+html.aw-min .progress {
+  background: var(--fill-3) !important;
+  border-radius: 100px !important;
+  height: 8px !important;
+  overflow: hidden;
+}
+html.aw-min .progress-bar { background: var(--primary) !important; transition: width .3s; }
+
+html.aw-min .spinner-border { color: var(--primary) !important; }
+
+html.aw-min ::-webkit-scrollbar { width: 10px; height: 10px; }
+html.aw-min ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; border: 2px solid var(--bg); }
+html.aw-min ::-webkit-scrollbar-thumb:hover { background: var(--fg-4); }
+html.aw-min ::-webkit-scrollbar-track { background: transparent; }
+html.aw-min { scrollbar-color: var(--border) transparent; }
+
+/* Link-style buttons (deck names, "Actions"): plain text, no button chrome.
+   Deck names are indented with leading spaces, so keep whitespace and never underline. */
+html.aw-min .btn.btn-link {
+  height: auto !important;
+  padding: 4px 6px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--fg) !important;
+  text-decoration: none !important;
+  white-space: pre !important;
+  justify-content: flex-start;
+  font-weight: 400 !important;
+}
+html.aw-min .btn.btn-link:hover { background: transparent !important; color: var(--primary) !important; }
+html.aw-min .btn.btn-link.dropdown-toggle {
+  color: var(--fg-3) !important;
+  border-radius: var(--radius) !important;
+  padding: 4px 10px !important;
+}
+html.aw-min .btn.btn-link.dropdown-toggle:hover,
+html.aw-min .btn.btn-link.dropdown-toggle.show {
+  color: var(--fg) !important;
+  background: var(--fill-2) !important;
+}
+
+html.aw-min .dropdown-menu .dropdown-item {
+  display: flex !important;
+  width: 100% !important;
+  height: 32px !important;
+  justify-content: flex-start !important;
+  padding: 0 12px !important;
+  border: 0 !important;
+  border-radius: var(--radius-sm) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-weight: 400 !important;
+  color: var(--fg) !important;
+}
+html.aw-min .dropdown-menu .dropdown-item:hover,
+html.aw-min .dropdown-menu .dropdown-item:focus { background: var(--fill-2) !important; }
+
+html.aw-min main .row.light-bottom-border {
+  align-items: center;
+  border-bottom: 0 !important;
+  border-radius: var(--radius);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 2px 0;
+  min-height: 40px;
+  transition: background-color .2s;
+}
+html.aw-min main .row.light-bottom-border:hover { background: var(--fill-2); }
+
+html.aw-min main .row > .col-1:has(.number) {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+html.aw-min .number {
+  font-family: var(--font-mono) !important;
+  font-size: 13px !important;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+html.aw-min .number.due  { color: var(--success-text) !important; }
+html.aw-min .number.new  { color: var(--info) !important; }
+html.aw-min .number.zero { color: var(--fg-3) !important; opacity: .6; }
+
+html.aw-min .aw-hidden { display: none !important; }
+
+/* Indentation comes from --aw-depth (set by decks.ts) instead of leading nbsp */
+html.aw-min main .row.light-bottom-border > [class*="col-"]:first-child {
+  display: flex;
+  align-items: center;
+  padding-left: calc(12px + var(--aw-depth, 0) * 24px) !important;
+}
+
+html.aw-min .aw-slot {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 2px;
+}
+html.aw-min .aw-chev {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  color: var(--fg-3);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s, color .2s;
+}
+html.aw-min .aw-chev:hover { background: var(--fill-2); color: var(--fg); }
+html.aw-min .aw-chev:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 1px;
+}
+html.aw-min .aw-chev svg { width: 14px; height: 14px; transition: transform .2s ease; }
+html.aw-min .aw-chev[aria-expanded="true"] svg { transform: rotate(90deg); }
+
+html.aw-min .aw-count {
+  margin-left: 6px;
+  padding: 0 8px;
+  font-size: 12px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 20px;
+  color: var(--fg-2);
+  background: var(--fill-3);
+  border-radius: 10px;
+}
+
+html.aw-min .aw-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+html.aw-min .aw-toolbar button {
+  height: 24px;
+  padding: 0 7px !important;
+  font-size: 14px !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* Bootstrap background utilities AnkiWeb uses on the footer/nav */
+html.aw-min .bg-gray,
+html.aw-min .bg-light,
+html.aw-min .bg-white { background: transparent !important; }
+html.aw-min .container-fluid.bg-gray { border-top: 1px solid var(--border-2) !important; }
+
+html.aw-min main .row.current,
+html.aw-min main .row.current:hover { background: var(--primary-bg) !important; }
+
+html.aw-min .count {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+html.aw-min .count.new    { color: var(--info) !important; }
+html.aw-min .count.learn  { color: var(--error) !important; }
+html.aw-min .count.review { color: var(--success-text) !important; }
+html.aw-min .count.active { text-decoration: underline; text-underline-offset: 4px; }
+
+/* The card itself. Its colors come from the user's note type (usually dark text on a
+   light background), so in dark mode we invert the whole card instead of forcing colors. */
+html.aw-min #qa_box.card {
+  margin-top: 8px;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  overflow: hidden;
+}
+@media (prefers-color-scheme: dark) {
+  html.aw-min[data-aw-theme="auto"] #qa_box.card {
+    filter: invert(.9) hue-rotate(180deg);
+    border: 0;
+    box-shadow: none;
+  }
+  html.aw-min[data-aw-theme="auto"] #qa_box img,
+  html.aw-min[data-aw-theme="auto"] #qa_box video {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+html.aw-min[data-aw-theme="dark"] #qa_box.card {
+  filter: invert(.9) hue-rotate(180deg);
+  border: 0;
+  box-shadow: none;
+}
+html.aw-min[data-aw-theme="dark"] #qa_box img,
+html.aw-min[data-aw-theme="dark"] #qa_box video {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html.aw-min #ansarea {
+  background: color-mix(in srgb, var(--bg) 92%, transparent) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border-2);
+  padding: 8px 0 12px;
+}
+html.aw-min #ansarea .text-center {
+  color: var(--fg-3);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 18px;
+}
+html.aw-min #ansarea .btn-lg {
+  height: 40px;
+  padding: 0 24px !important;
+  font-size: 16px !important;
+}
+
+html.aw-min #ansarea .d-flex:has(> div:nth-child(2)) > div > button.btn-primary {
+  min-width: 96px;
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 2px 0 var(--fill-1) !important;
+}
+html.aw-min #ansarea .d-flex:has(> div:nth-child(2)) > div > button.btn-primary:hover {
+  border-color: var(--primary-hover) !important;
+  color: var(--primary-hover) !important;
+  background: var(--bg) !important;
+}
+html.aw-min #ansarea .d-flex:has(> div:nth-child(2)) > div > button.btn-primary::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+html.aw-min #ansarea .d-flex > div:nth-child(1) > button.btn-primary::before { background: var(--error); }
+html.aw-min #ansarea .d-flex > div:nth-child(2) > button.btn-primary::before { background: var(--warning); }
+html.aw-min #ansarea .d-flex > div:nth-child(3) > button.btn-primary::before { background: var(--success); }
+html.aw-min #ansarea .d-flex > div:nth-child(4) > button.btn-primary::before { background: var(--info); }
+
+html.aw-min #ansarea .d-flex { gap: 8px; }
+
+/* Search box (Bootstrap floating label): keep the field tall enough for the label and
+   remove the white patch Bootstrap paints behind the floated label. */
+html.aw-min .form-floating > .form-control {
+  height: 56px;
+  padding: 24px 12px 6px !important;
+}
+html.aw-min .form-floating > label {
+  color: var(--fg-3) !important;
+  font-size: 14px;
+  padding: 16px 12px;
+}
+html.aw-min .form-floating > .form-control:focus ~ label::after,
+html.aw-min .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+html.aw-min .form-floating > label::after {
+  background: transparent !important;
+}
+html.aw-min .btn-lg { height: 40px; padding: 0 24px !important; font-size: 16px !important; }
